@@ -18,7 +18,7 @@ class Counter extends React.Component {
     };
     handleInputChange = (event) => {
         const value = event.target.value;
-        this.setState({ count: parseInt(value)});
+        if (value>=0) {this.setState({ count: parseInt(value)})};
     }
     render(){
         return(
